@@ -5,11 +5,13 @@ A custom binding syntax built on top of
 # Usage
 ## Register a property for binding
 By default, **transformer_binding** supports binding for the following properties
+
 - `text` (one way)
 - `value` (two way)
 
 To enable binding for other properties, users must register setters and,
 optionally, getters for those properties
+
 - Register both setters and getters to enable one way binding and two way binding
 - Register setters only to enable one way binding
 
@@ -72,21 +74,25 @@ main() async {
 The binding syntax is pretty much the same as that of
 [polymer](https://pub.dartlang.org/packages/polymer) except for the added
 `|transformer-name` token and the different mustaches.
+
 1. Two-way binding with explicit event name
-```` html
+    
+    ```` html
     <my-element target-prop="{%host.path|transformer-name::target-event-name%}">
-````
+    ````
 2. Two-way binding with default event name
-```` html
+    
+    ```` html
     <my-element target-prop="{%host.path|transformer-name%}">
     
     which is equivalent to
     
     <my-element target-prop="{%host.path|transformer-name::target-prop-changed%}">
-````
+    ````
 3. One-way binding
-```` html
+    
+    ```` html
     <span>[%host.path | transformer-name%]</span>
     
     <my-element target-prop="[%host.path | transformer-name%]">
-````
+    ````
