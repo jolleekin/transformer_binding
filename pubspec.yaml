@@ -1,5 +1,5 @@
 name: transformer_binding
-version: 0.0.1
+version: 0.0.2
 author: Man Hoang <jolleekin@outlook.com>
 description: A custom binding syntax built on top of Polymer that supports transformers.
 homepage: https://github.com/jolleekin/transformer_binding
